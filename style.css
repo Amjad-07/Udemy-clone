@@ -13,6 +13,10 @@
     border-bottom: solid black 2px;
     gap: 10px;
     align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
 }
 
 .u {
@@ -29,6 +33,7 @@
     gap: 10px;
     align-items: center;
 
+
 }
 
 .navbar-2 input {
@@ -36,6 +41,7 @@
     width: 100%;
     font-size: 16px;
     border: none;
+    background-color: transparent;
 
 
 
@@ -50,6 +56,23 @@
     gap: 20px;
     align-items: center;
 
+}
+.ml{
+    position: relative;
+    cursor: pointer;
+}
+.ml__popup{
+    position: absolute;
+    right: 0;
+    border: solid black 1px;
+    padding: 5px;
+    top: 30px;
+    width: 100px;
+    background-color: white;
+    display: none;
+}
+.ml:hover .ml__popup{
+    display: block;
 }
 
 .catagories {
@@ -66,7 +89,21 @@
     color: aliceblue;
 
 }
-
+.imge{
+    position: relative;
+    z-index: 1;
+}
+.imge__off{
+    width: 35%;
+    border: solid 2px black;
+    padding: 25px;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+.imge__off p{
+padding-top: 10px;}
 .imge img {
     width: 100%;
 }
