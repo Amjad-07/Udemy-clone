@@ -57,11 +57,13 @@
     align-items: center;
 
 }
-.ml{
+
+.ml {
     position: relative;
     cursor: pointer;
 }
-.ml__popup{
+
+.ml__popup {
     position: absolute;
     right: 0;
     border: solid black 1px;
@@ -69,11 +71,17 @@
     top: 30px;
     width: 100px;
     background-color: white;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    border-radius: 15px;
 }
-.ml:hover .ml__popup{
-    display: block;
+
+.ml:hover .ml__popup {
+    opacity: 0.7;
+    visibility: visible;
 }
+
 
 .catagories {
     display: flex;
@@ -87,13 +95,26 @@
     padding: 8px;
     border-radius: 20px;
     color: aliceblue;
+    border: 1px solid blueviolet;
+
+
 
 }
-.imge{
+.catagories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: blueviolet;
+    cursor: pointer;
+    border: 1px solid blueviolet;
+
+}
+
+.imge {
     position: relative;
     z-index: 1;
 }
-.imge__off{
+
+.imge__off {
     width: 35%;
     border: solid 2px black;
     padding: 25px;
@@ -101,9 +122,30 @@
     position: absolute;
     top: 10%;
     left: 10%;
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
-.imge__off p{
-padding-top: 10px;}
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1);
+
+    }
+
+    
+}
+
+
+.imge__off p {
+    padding-top: 10px;
+}
+
 .imge img {
     width: 100%;
 }
@@ -121,7 +163,7 @@ padding-top: 10px;}
 .course img {
     width: 100%;
 
-    
+
 }
 
 .recom-1 {
@@ -130,43 +172,51 @@ padding-top: 10px;}
     flex-wrap: wrap;
     margin-top: 10px;
 }
-.topics{
+
+.topics {
     padding: 10px;
 }
-.topic-c{
+
+.topic-c {
     display: flex;
-    gap:10px;
+    gap: 10px;
     margin-top: 10px;
     flex-wrap: wrap;
 
 }
-.topic-c p{
+
+.topic-c p {
     border: solid grey 2px;
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
-    
+
 
 }
-.popular{
+
+.popular {
     padding: 10px;
 }
-.foot1{
+
+.foot1 {
     display: flex;
     gap: 10px;
 }
-.foott{
+
+.foott {
     display: flex;
     justify-content: space-between;
     margin: 20px;
     align-items: center;
 }
-.foot{
+
+.foot {
     padding: 30px;
     background-color: black;
     color: white;
 }
-.foot1 p{
+
+.foot1 p {
     margin: 20px;
 
 }
